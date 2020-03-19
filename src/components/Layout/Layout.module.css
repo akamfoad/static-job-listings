@@ -1,0 +1,10 @@
+.Header {
+  width: 100%;
+  height: 156px;
+  background-color: var(--Desaturated-Dark-Cyan);
+  background-image: url("../../assets/images/bg-header-desktop.svg");
+}
+
+.Mobile {
+  background-image: url("../../assets/images/bg-header-mobile.svg");
+}
