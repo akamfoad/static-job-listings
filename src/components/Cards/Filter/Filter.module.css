@@ -1,0 +1,26 @@
+.Filter {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px hsl(180, 29%, 78%);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 0;
+  top: -30px;
+}
+
+.Filter button {
+  border: none;
+  background-color: transparent;
+  color: var(--Desaturated-Dark-Cyan);
+  font-family: var(--Family);
+  font-size: var(--Font-Size);
+  cursor: pointer;
+}
+
+.Filter button:hover {
+  text-decoration: underline;
+}

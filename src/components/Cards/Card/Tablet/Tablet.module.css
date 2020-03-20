@@ -1,15 +1,60 @@
+/* default tablet */
 .Tablet {
   cursor: pointer;
-  padding: 5px 8px;
+  padding: 10px 8px 5px 8px;
   margin-right: 10px;
   border-radius: 5px;
   color: var(--Desaturated-Dark-Cyan);
   background-color: var(--Light-Grayish-Cyan-BG);
   font-weight: var(--Bold-Weight);
   transition: 0.111s ease-in-out;
+  display: flex;
+  align-items: baseline;
+}
+
+.Tablet:last-child {
+  margin-right: 0;
 }
 
 .Tablet:hover {
   color: #fff;
   background-color: var(--Desaturated-Dark-Cyan);
+}
+
+/* filterTablet */
+.FilterTablet {
+  height: 25px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: var(--Desaturated-Dark-Cyan);
+  background-color: var(--Light-Grayish-Cyan-BG);
+  font-weight: var(--Bold-Weight);
+  transition: 0.111s ease-in-out;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.FilterTablet:last-child {
+  margin-right: 0;
+}
+
+.TextContent {
+  padding: 9px 5px 6px 5px;
+}
+.Remove_Icon {
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Desaturated-Dark-Cyan);
+}
+.Remove_Icon img{
+  width: 12px;
+}
+
+.Remove_Icon:hover {
+  background-color: var(--Very-Dark-Grayish-Cyan);
 }

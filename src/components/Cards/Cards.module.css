@@ -1,4 +1,5 @@
 .Cards {
+  position: relative;
   width: 100%;
-  padding: 3rem 6rem;
+  padding: 0 6rem;
 }
