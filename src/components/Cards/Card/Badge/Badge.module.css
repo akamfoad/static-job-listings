@@ -1,0 +1,16 @@
+.Badge{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    margin: 0 5px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: var(--Bold-Weight);
+}
+
+.NEW {
+    background-color: var(--Desaturated-Dark-Cyan);
+}
+.FEATURED {
+    background-color: var(--Very-Dark-Grayish-Cyan);
+}

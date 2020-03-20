@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "./components/Layout/Layout";
+import Cards from "./components/Cards/Cards";
 function App() {
   return (
     <>
       <Layout>
-        <h1>Main</h1>
+        <Cards />
       </Layout>
     </>
   );

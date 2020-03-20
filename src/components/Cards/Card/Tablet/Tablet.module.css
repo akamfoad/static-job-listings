@@ -1,0 +1,15 @@
+.Tablet {
+  cursor: pointer;
+  padding: 5px 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: var(--Desaturated-Dark-Cyan);
+  background-color: var(--Light-Grayish-Cyan-BG);
+  font-weight: var(--Bold-Weight);
+  transition: 0.111s ease-in-out;
+}
+
+.Tablet:hover {
+  color: #fff;
+  background-color: var(--Desaturated-Dark-Cyan);
+}

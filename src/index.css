@@ -30,6 +30,7 @@
 body {
   width: 1440px;
   height: 100vh;
+  background-color: var(--Light-Grayish-Cyan-BG);
   font-family: var(--Family), sans-serif;
   font-size: var(--Font-Size);
   font-weight: var(--Light-Weight);

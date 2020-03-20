@@ -1,0 +1,77 @@
+.Card {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 2rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px hsl(180, 29%, 78%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.Details {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+}
+
+.Detail {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Title {
+  display: flex;
+  align-items: baseline;
+}
+
+.Name {
+  text-transform: capitalize;
+  color: var(--Desaturated-Dark-Cyan);
+  font-weight: var(--Bold-Weight);
+}
+
+.Badges {
+  margin: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Jobe {
+  margin: 1rem 0;
+  font-weight: var(--Bold-Weight);
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.111s ease-in-out;
+}
+
+.Jobe:hover {
+  color: var(--Desaturated-Dark-Cyan);
+}
+
+.Logo {
+  width: 88px;
+  height: 88px;
+}
+
+.Others {
+  color: var(--Dark-Grayish-Cyan);
+}
+
+.Others > span {
+  margin: 0 7px;
+}
+
+.Others > span:first-child {
+  margin-left: 0;
+}
+.Others > span:last-child {
+  margin-right: 0;
+}
+
+.Tabs {
+  display: flex;
+  align-items: center;
+}

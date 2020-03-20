@@ -5,7 +5,6 @@ const Layout = props => {
   const [isMobile, setIsMobile] = useState(mobileQuery.matches);
   const mobileQueryCallback = e => {
     setIsMobile(e.matches);
-    console.log(e.matches);
   };
   useEffect(() => {
     mobileQuery.addListener(mobileQueryCallback);
@@ -17,9 +16,7 @@ const Layout = props => {
     <>
       <header
         className={[classes.Header, isMobile ? classes.Mobile : null].join(" ")}
-      >
-        {""}
-      </header>
+      ></header>
       <main>{props.children}</main>
     </>
   );
