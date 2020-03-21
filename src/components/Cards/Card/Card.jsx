@@ -31,6 +31,7 @@ const card = props => {
           </div>
         </div>
       </div>
+      <div className={classes.Belt} />
       <div className={classes.Tabs}>
         {props.tabs.map(tab => (
           <Tablet

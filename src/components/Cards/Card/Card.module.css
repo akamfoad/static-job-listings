@@ -81,7 +81,73 @@
   margin-right: 0;
 }
 
+.Belt {
+  display: none;
+}
+
 .Tabs {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 1185px) {
+  .Belt {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+    height: 2px;
+    background-color: hsl(180, 3%, 60%);
+  }
+}
+
+@media (max-width: 709px) {
+  .Details,
+  .Belt,
+  .Tabs {
+    width: 100%;
+  }
+  .Card {
+    padding-bottom: 0;
+  }
+  .Tabs {
+    flex-wrap: wrap;
+  }
+  .Tabs > * {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 654px) {
+  .Card {
+    margin: 3rem 0;
+  }
+  .Details {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Logo {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: -60px;
+    left: 0;
+  }
+  .Detail {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 524px) {
+  .Card {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .Detail {
+    padding-right: 0;
+  }
+
+  .Others > span {
+    margin: 0 3px;
+  }
 }

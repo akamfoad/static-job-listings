@@ -117,10 +117,10 @@ const data = [
   {
     logo: eyecam_coLogo,
     name: "Eyecam Co.",
-    job: "Full Stack Engineer",
+    job: "Fullstack Engineer",
     badges: [],
     level: "Midweight",
-    role: "Full Stack",
+    role: "Fullstack",
     languages: ["JavaScript", "Python"],
     time: "3w ago",
     workMethod: "Full Time",

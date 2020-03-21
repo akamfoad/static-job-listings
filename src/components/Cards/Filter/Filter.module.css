@@ -13,6 +13,7 @@
 }
 
 .Tablets {
+  margin-right: 1rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -28,4 +29,13 @@
 
 .Filter button:hover {
   text-decoration: underline;
+}
+@media (max-width: 825px) {
+  .Filter {
+    padding-bottom: 0;
+  }
+  .Filter button,
+  .Tablets > * {
+    margin-bottom: 1rem;
+  }
 }
