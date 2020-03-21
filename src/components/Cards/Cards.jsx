@@ -4,18 +4,31 @@ import Data from "../../data-template";
 import Filter from "./Filter/Filter";
 import classes from "./Cards.module.css";
 const Cards = props => {
-  const [filterBy, setFilterBy] = useState(["Full Stack"]);
+  const [filterBy, setFilterBy] = useState([]);
 
   const addFilter = filter => {
-    console.log(filter);
+    if (!filterBy.includes(filter)) {
+      setFilterBy(filterBy.concat(filter));
+    }
   };
-  const removeFilter = filters => {
-    console.log(filters);
+  const removeFilter = filter => {
+    if (filter.constructor === String) {
+      setFilterBy(filterBy.filter(item => item !== filter));
+    } else {
+      setFilterBy(filterBy.filter(item => !filter.includes(item)));
+    }
+  };
+  const dataFilterCallback = item => {
+    let include = true;
+    for (let i of filterBy) {
+      include = item.tabs.includes(i) && include;
+    }
+    return include;
   };
   return (
     <div className={classes.Cards}>
       <Filter filters={filterBy} removeFilter={removeFilter} />
-      {Data.map(card => (
+      {Data.filter(dataFilterCallback).map(card => (
         <Card
           key={card.name}
           logo={card.logo}
@@ -25,7 +38,7 @@ const Cards = props => {
           level={card.level}
           role={card.role}
           time={card.time}
-          tabs={[card.role, card.level, ...card.languages, ...card.tools]}
+          tabs={card.tabs}
           workMethod={card.workMethod}
           workType={card.workType}
           addFilter={addFilter}

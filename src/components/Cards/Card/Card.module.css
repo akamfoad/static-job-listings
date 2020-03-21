@@ -7,11 +7,16 @@
   background-color: #fff;
   box-shadow: 0 5px 10px hsl(180, 29%, 78%);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .Card:not(:first-child) {
   margin-top: 1rem;
+}
+
+.Card.Featured {
+  border-left: 4px solid var(--Desaturated-Dark-Cyan);
 }
 
 .Details {
@@ -33,6 +38,7 @@
 
 .Name {
   text-transform: capitalize;
+  padding: 8px 8px 5px 0;
   color: var(--Desaturated-Dark-Cyan);
   font-weight: var(--Bold-Weight);
 }

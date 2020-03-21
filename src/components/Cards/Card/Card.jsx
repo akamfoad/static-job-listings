@@ -4,8 +4,12 @@ import classes from "./Card.module.css";
 import Badge from "./Badge/Badge";
 import Tablet from "./Tablet/Tablet";
 const card = props => {
+  const cardClasses = [classes.Card];
+  if (props.badges && props.badges.includes("FEATURED")) {
+    cardClasses.push(classes.Featured);
+  }
   return (
-    <div className={classes.Card}>
+    <div className={cardClasses.join(" ")}>
       <div className={classes.Details}>
         <img alt="LOGO" className={classes.Logo} src={props.logo} />
         <div className={classes.Detail}>
@@ -29,7 +33,11 @@ const card = props => {
       </div>
       <div className={classes.Tabs}>
         {props.tabs.map(tab => (
-          <Tablet text={tab} />
+          <Tablet
+            addCallback={() => props.addFilter(tab)}
+            key={tab}
+            text={tab}
+          />
         ))}
       </div>
     </div>
@@ -37,15 +45,17 @@ const card = props => {
 };
 
 card.propTypes = {
-  name: propTypes.string.isRequired,
   logo: propTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  job: propTypes.string.isRequired,
   badges: propTypes.array.isRequired,
   level: propTypes.string.isRequired,
   role: propTypes.string.isRequired,
   time: propTypes.string.isRequired,
+  tabs: propTypes.array.isRequired,
   workMethod: propTypes.string.isRequired,
   workType: propTypes.string.isRequired,
-  tabs: propTypes.array.isRequired
+  addFilter: propTypes.func.isRequired
 };
 
 export default card;

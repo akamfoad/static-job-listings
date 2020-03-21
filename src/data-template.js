@@ -141,4 +141,15 @@ const data = [
     tools: ["React", "Sass"]
   }
 ];
+
+data.map(item => {
+  const mappedItem = (item.tabs = [
+    item.role,
+    item.level,
+    ...item.languages,
+    ...item.tools
+  ]);
+  return mappedItem;
+});
+
 export default data;

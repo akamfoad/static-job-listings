@@ -7,13 +7,17 @@ const tablet = props => {
       return (
         <div className={classes.FilterTablet}>
           <span className={classes.TextContent}>{props.text}</span>
-          <span className={classes.Remove_Icon}>
+          <span onClick={()=> props.removeCallback(props.text)} className={classes.Remove_Icon}>
             <img src={remove_icon} alt="DELETE ICON" />
           </span>
         </div>
       );
     default:
-      return <div className={classes.Tablet}>{props.text}</div>;
+      return (
+        <div onClick={props.addCallback} className={classes.Tablet}>
+          {props.text}
+        </div>
+      );
   }
 };
 export default tablet;
